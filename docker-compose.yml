@@ -1,0 +1,30 @@
+version: "3"
+
+volumes:
+  data_base:
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ".:/private_diary"
+    tty: true
+    stdin_open: true
+    depends_on:
+      - db
+    links:
+      - db
+    env_file:
+      - ./.env.development
+
+  db:
+    image: postgres
+    ports: 
+            - "5432"
+    env_file:
+      - ./.env.development
+    volumes:
+      - "data_base:/var/lib/postgresql/data"
+
