@@ -27,4 +27,5 @@ services:
       - ./.env.development
     volumes:
       - "data_base:/var/lib/postgresql/data"
-
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
