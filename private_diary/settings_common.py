@@ -89,6 +89,9 @@ DATABASES = {
         "PASSWORD": os.environ.get("DB_PASSWORD"),
         'HOST': 'db',
         'PORT': 5432,
+        'TEST': {
+            'NAME': 'test_database_name',
+        }
     }
 }
 
@@ -183,3 +186,7 @@ ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
 DEFAULT_FROM_EMAIL = 'admin@example.com'
 
 MEDIA_URL = '/media/'
+
+# バックアップバッチ用
+BACKUP_PATH = "backup/"
+NUM_SAVED_BACKUP = 30
