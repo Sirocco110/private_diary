@@ -2,3 +2,8 @@ Django
 psycopg2
 django-allauth
 pillow
+
+dj-database-url
+gunicorn
+whitenoise
+django-heroku
