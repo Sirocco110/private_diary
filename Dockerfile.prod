@@ -8,4 +8,5 @@ ADD . /private_diary/
 
 COPY . .
 RUN python3 manage.py collectstatic --noinput
+
 CMD ["python3", "manage.py", "runserver"]
