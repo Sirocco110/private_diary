@@ -9,4 +9,4 @@ ADD . /private_diary/
 COPY . .
 RUN python3 manage.py collectstatic --noinput
 
-CMD ["python3", "manage.py", "runserver"]
+CMD gunicorn --bind 0.0.0.0:$PORT application.wsgi
