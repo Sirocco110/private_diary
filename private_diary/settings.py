@@ -8,9 +8,9 @@ DEBUG = False
 # 許可するホスト名のリスト
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
-# 静的ファイルを配置する場所
-STATIC_ROOT = os.path.join(BASE_DIR,"static")
-MEDIA_ROOT = os.path.join(BASE_DIR,"media")
+# # 静的ファイルを配置する場所
+# STATIC_ROOT = os.path.join(BASE_DIR,"static")
+# MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 
 # # Amazon SES関連設定
 # AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
