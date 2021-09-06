@@ -11,8 +11,8 @@ DEBUG = False
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
 # # 静的ファイルを配置する場所
-# STATIC_ROOT = '/usr/share/nginx/html/static'
-# MEDIA_ROOT = '/usr/share/nginx/html/media'
+STATIC_ROOT = os.path.join(BASE_DIR, 'diary/static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'diary/media')
 
 # # Amazon SES関連設定
 # AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
