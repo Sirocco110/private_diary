@@ -2,6 +2,7 @@ from .settings_common import *
 import django_heroku
 import dj_database_url
 
+django_heroku.settings(locals())
 
 # デバッグモードを有効にするかどうか(本番運用では必ずFalseにする)
 DEBUG = False

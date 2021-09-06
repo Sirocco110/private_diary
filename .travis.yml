@@ -16,6 +16,7 @@ deploy:
     docker build -t registry.heroku.com/$HEROKU_APP_NAME/web -f Dockerfile.prod .;
     docker push registry.heroku.com/$HEROKU_APP_NAME/web;
     heroku run --app $HEROKU_APP_NAME python3 manage.py makemigrations;
-    heroku run --app $HEROKU_APP_NAME python3 manage.py migrate
+    heroku run --app $HEROKU_APP_NAME python3 manage.py migrate;
+    heroku ps:scale web=1
   on:
     branch: deploy
