@@ -15,6 +15,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'private_diary.settings')
 
 application = get_wsgi_application()
 
-# Heroku
-from whitenoise.django import DjangoWhiteNoise
-application = DjangoWhiteNoise(application)
+# # Heroku
+# from whitenoise.django import DjangoWhiteNoise
+# application = DjangoWhiteNoise(application)
