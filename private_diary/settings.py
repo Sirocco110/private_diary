@@ -17,6 +17,11 @@ ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 # AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
 # EMAIL_BACKEND = 'django_ses.SESBackend'
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
